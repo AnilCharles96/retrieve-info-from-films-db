@@ -32,7 +32,9 @@ def get_data_from_page(title):
         
     return movie_data
 
-def getMovieTitles(title):
+# PEP8 Guidelines suggest function names should be lowercase with words separated by underscores.
+# Question asks for getMovieTitles, but I will use get_movie_titles to follow PEP8.
+def get_movie_titles(title):
     """
     Fetches unique movie titles from the API based on the provided title.
 
@@ -72,7 +74,7 @@ def main():
     parser.add_argument("title", type=str, help="Title of the movie to search for")
     args = parser.parse_args()
 
-    titles = getMovieTitles(args.title)
+    titles = get_movie_titles(args.title)
     if titles:
         print("Movie Titles:")
         for title in titles:
